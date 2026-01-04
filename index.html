@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Lucas</title>
+<style>
+  /* RESET BÁSICO */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  body, html {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  /* FUNDO GALÁXIA */
+  body {
+    background: radial-gradient(ellipse at center, #4b0082 0%, #1c0033 100%);
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+  }
+
+  /* ESTRELAS ANIMADAS */
+  body::before {
+    content: '';
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: transparent;
+    box-shadow: 
+      0 0 2px 1px #fff,
+      100px 200px 2px 1px #fff,
+      300px 400px 2px 1px #fff,
+      500px 600px 2px 1px #fff,
+      700px 100px 2px 1px #fff,
+      900px 300px 2px 1px #fff;
+    animation: moveStars 50s linear infinite;
+  }
+
+  @keyframes moveStars {
+    from {transform: translate(0,0);}
+    to {transform: translate(-200px,-200px);}
+  }
+
+  /* MENU TOPO */
+  header {
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    gap: 30px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
+  }
+
+  /* SEÇÕES */
+  section {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+  }
+
+  section h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #d8b0ff;
+    text-shadow: 0 0 10px #b57aff, 0 0 20px #9b30ff;
+  }
+
+  section p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+  }
+
+  /* BOTÃO WHATSAPP */
+  .whatsapp-btn {
+    display: inline-block;
+    background: #25D366;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px #25D366, 0 0 20px #25D366;
+  }
+
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #25D366, 0 0 30px #25D366;
+  }
+
+  /* EFEITOS SUAVES */
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- MENU -->
+<header>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<!-- INÍCIO -->
+<section id="inicio">
+  <h1>Desenvolvedor Front-End | HTML, CSS, JS e Design</h1>
+  <p>Portfólio criado para apresentar minhas habilidades e projetos recentes.</p>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <h1>Sobre Mim</h1>
+  <p>Olá! Meu nome é Lucas. Sou apaixonado por desenvolvimento web e design. tambem sou muito bom usando AI para negocios de empresas pequenas e medias. tenho conhecimento na area de TI como softwares e Hardwares e etc. </p>
+</section>
+
+  <!-- CONHECIMENTOS EM TECNOLOGIA -->
+<section id="conhecimentos">
+  <h1>Conhecimentos em Tecnologia</h1>
+  <div class="conhecimentos-grid">
+    <div class="skill">HTML5</div>
+    <div class="skill">CSS3</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Design de Interfaces</div>
+    <div class="skill">Suporte Técnico</div>
+    <div class="skill">Manutenção de Aparelhos</div>
+    <div class="skill">Inteligência Artificial (aplicações simples para empresas)</div>
+  </div>
+</section>
+  
+<!-- PROJETOS -->
+<section id="projetos">
+  <h1>Projetos</h1>
+  <p>Aqui estão alguns dos meus projetos recentes:</p>
+
+  <div class="projetos">
+
+    <div class="card">
+      <h2>um semaforo funcional</h2>
+      <p>um semaforo que funciona com um fundo roxo e preto.</p>
+      <a href="https://codepen.io/Lucas-Henri/full/OPMLEry" target="_blank">Ver semaforo</a>
+    </div>
+     
+    
+    
+    <div class="card">
+      <h2>um relogio simples mais funcional</h2>
+      <p>um relogio que funciona verdade.</p>
+      <a href="https://codepen.io/Lucas-Henri/full/myVbKOv" target="_blank">ver relogio</a>
+    </div>
+    
+<div class="card">
+    <h2>gerador de Conselhos 🔮</h3>
+    <p>Mini-app que gera conselhos aleatórios com visual moderno. HTML, CSS e JS puro.</p>
+    <a href="https://codepen.io/Lucas-Henri/full/RNRNjLe"  targe target="_blank">ver gerador</a>
+</div>
+    
+    <div class="card">
+    <h2>IA roxa</h3>
+    <p>IA roxa,ela e perdidamente apaixonada por roxo, ela so responde com roxo</p>
+    <a href="https://app.creao.ai/share?app=6HnjIX1v&utm_source=share&utm_medium=link"  targe target="_blank">ver IA</a>
+</div>
+    
+    <div class="card">
+         <h2> jogo da velha </h2>
+         <p>jogo da velha tematizado com roxo, aqui voce joga contra um computdor.</p>
+  <a href="https://codepen.io/Lucas-Henri/full/QwEjOVR" targe target="_blank">ver jogo </a>
+  </div>
+  
+  
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <h1>Contato</h1>
+  <p>Quer trocar uma ideia ou ver meus trabalhos mais de perto? Me chame no WhatsApp:</p>
+  <a class="whatsapp-btn" href="https://wa.me/5561981091198" target="_blank">💬 WhatsApp</a>
+</section>
+
+</body>
+</html>
